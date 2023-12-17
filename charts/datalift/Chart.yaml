@@ -1,0 +1,23 @@
+apiVersion: v2
+name: datalift
+description: Official Helm Chart for Datalift
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+# We want Kube 1.20+ so that on-demand runners can be cleaned up properly.
+# This uses the Job expiration fields that was introduced in 1.20. Without
+# this, thousands of dead pods will pollute the Kubernetes server.
+#
+# IMPORTANT: the "-0" suffix on here is necessary for EKS and GKE to validate
+# since they use a modified version of Kubernetes.
+kubeVersion: ">= 1.20.0-0"
+home: https://datalift.io
+icon: https://raw.githubusercontent.com/datalifthq/datalift-helm/master/logo.png
+keywords:
+- datalift
+- helm
+sources:
+- https://github.com/datalifthq/datalift-helm
+maintainers:
+- name: datalift
+  url: https://github.com/datalifthq
