@@ -1,6 +1,6 @@
 apiVersion: v2
-name: datalift
-description: Official Helm Chart for Datalift
+name: datalift-agent
+description: Official Helm Chart for Datalift Agent
 type: application
 version: 0.1.0
 appVersion: "1.0.0"
