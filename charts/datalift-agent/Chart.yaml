@@ -1,6 +1,6 @@
 apiVersion: v2
 name: datalift-agent
-description: Official Helm Chart for Datalift Agent
+description: Official Helm chart for Datalift Agent
 type: application
 version: 0.1.0
 appVersion: "1.0.0"
@@ -15,9 +15,12 @@ home: https://datalift.io
 icon: https://raw.githubusercontent.com/datalifthq/datalift-helm/master/logo.png
 keywords:
 - datalift
+- datalift-agent
 - helm
 sources:
 - https://github.com/datalifthq/datalift-helm
 maintainers:
 - name: datalift
   url: https://github.com/datalifthq
+annotations:
+  artifacthub.io/category: integration-delivery
