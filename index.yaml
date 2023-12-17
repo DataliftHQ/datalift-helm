@@ -22,4 +22,26 @@ entries:
     urls:
     - https://github.com/DataliftHQ/datalift-helm/releases/download/datalift-0.1.0/datalift-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-17T03:35:14.443182416Z"
+  datalift-agent:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-12-17T18:09:43.586389131Z"
+    description: Official Helm Chart for Datalift Agent
+    digest: 8dec6433b47d96af52485fae718d87895de76c00207ace8634089d282c9a6ece
+    home: https://datalift.io
+    icon: https://raw.githubusercontent.com/datalifthq/datalift-helm/master/logo.png
+    keywords:
+    - datalift
+    - helm
+    kubeVersion: '>= 1.20.0-0'
+    maintainers:
+    - name: datalift
+      url: https://github.com/datalifthq
+    name: datalift-agent
+    sources:
+    - https://github.com/datalifthq/datalift-helm
+    type: application
+    urls:
+    - https://github.com/DataliftHQ/datalift-helm/releases/download/datalift-agent-0.1.0/datalift-agent-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-12-17T18:09:43.586400022Z"
