@@ -1,5 +1,4 @@
 # Datalift Helm Chart
-[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/datalift)](https://artifacthub.io/packages/search?page=1&org=datalift)
 
 This repository contains the official Datalift Helm chart for installing
 and configuring Datalift on Kubernetes.
@@ -24,7 +23,7 @@ In addition to Helm, you must also have a:
 
 ## Usage
 
-#### Install the Helm Chart
+### Install the Helm Chart
 
 Before installing the chart, you must create two Kubernetes secrets:
 
@@ -36,6 +35,43 @@ $ helm repo add datalift https://charts.datalift.io
 $ helm install datalift datalift/datalift-agent
 ```
 
-Please see the many options supported in the `values.yaml` file. These are also
-fully documented directly on the [Datalift website](https://datalift.io/docs/helm)
-along with more detailed installation instructions.
+## Values
+
+### General parameters
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| affinity | object | `{}` |  |
+| autoscaling.enabled | bool | `false` |  |
+| autoscaling.maxReplicas | int | `100` |  |
+| autoscaling.minReplicas | int | `1` |  |
+| autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
+| fullnameOverride | string | `""` |  |
+| image.pullPolicy | string | `"IfNotPresent"` |  |
+| image.repository | string | `"nginx"` |  |
+| image.tag | string | `""` |  |
+| imagePullSecrets | list | `[]` |  |
+| ingress.annotations | object | `{}` |  |
+| ingress.className | string | `""` |  |
+| ingress.enabled | bool | `false` |  |
+| ingress.hosts[0].host | string | `"chart-example.local"` |  |
+| ingress.hosts[0].paths[0].path | string | `"/"` |  |
+| ingress.hosts[0].paths[0].pathType | string | `"ImplementationSpecific"` |  |
+| ingress.tls | list | `[]` |  |
+| nameOverride | string | `""` |  |
+| nodeSelector | object | `{}` |  |
+| podAnnotations | object | `{}` |  |
+| podLabels | object | `{}` |  |
+| podSecurityContext | object | `{}` |  |
+| replicaCount | int | `1` |  |
+| resources | object | `{}` |  |
+| securityContext | object | `{}` |  |
+| service.port | int | `80` |  |
+| service.type | string | `"ClusterIP"` |  |
+| serviceAccount.annotations | object | `{}` |  |
+| serviceAccount.automount | bool | `true` |  |
+| serviceAccount.create | bool | `true` |  |
+| serviceAccount.name | string | `""` |  |
+| tolerations | list | `[]` |  |
+| volumeMounts | list | `[]` |  |
+| volumes | list | `[]` |  |
