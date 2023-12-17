@@ -3,9 +3,10 @@ name: Chart Publish
 on:
   push:
     branches:
-    - master
-    paths:
-    - "charts/**"
+    - '*'
+    # - master
+    # paths:
+    # - "charts/**"
 
 permissions:
   contents: read
@@ -29,9 +30,9 @@ jobs:
       run: |
         git config user.name "$GITHUB_ACTOR"
         git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-    - name: Fetch current Chart Index
-      run: |
-        git checkout origin/gh-pages index.yaml
+    # - name: Fetch current Chart Index
+    #   run: |
+    #     git checkout origin/gh-pages index.yaml
     - name: Run chart-releaser
       uses: helm/chart-releaser-action@v1.6.0
       with:
