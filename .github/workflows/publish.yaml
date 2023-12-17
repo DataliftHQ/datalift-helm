@@ -1,12 +1,12 @@
 ## Reference: https://github.com/helm/chart-releaser-action
 name: Chart Publish
-on:
-  push:
-    branches:
-    - '*'
-    # - master
-    # paths:
-    # - "charts/**"
+on: pull_request
+# on:
+#   push:
+#     branches:
+#     - master
+#     paths:
+#     - "charts/**"
 
 permissions:
   contents: read
