@@ -1,27 +1,5 @@
 apiVersion: v1
 entries:
-  datalift:
-  - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2023-12-17T03:35:14.443176906Z"
-    description: Official Helm Chart for Datalift
-    digest: a40be61a1f68533f62d5973c5a29fe647135940f514edde576b09511aca9699b
-    home: https://datalift.io
-    icon: https://raw.githubusercontent.com/datalifthq/datalift-helm/master/logo.png
-    keywords:
-    - datalift
-    - helm
-    kubeVersion: '>= 1.20.0-0'
-    maintainers:
-    - name: datalift
-      url: https://github.com/datalifthq
-    name: datalift
-    sources:
-    - https://github.com/datalifthq/datalift-helm
-    type: application
-    urls:
-    - https://github.com/DataliftHQ/datalift-helm/releases/download/datalift-0.1.0/datalift-0.1.0.tgz
-    version: 0.1.0
   datalift-agent:
   - apiVersion: v2
     appVersion: 1.0.0
