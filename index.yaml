@@ -1,6 +1,30 @@
 apiVersion: v1
 entries:
   datalift-agent:
+  - annotations:
+      artifacthub.io/category: integration-delivery
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-12-17T19:05:22.912060849Z"
+    description: Official Helm chart for Datalift Agent
+    digest: 273782172b916d6816cc786421d5ea492f3c87b25daffff5bf298753cd38ec03
+    home: https://datalift.io
+    icon: https://raw.githubusercontent.com/datalifthq/datalift-helm/master/logo.png
+    keywords:
+    - datalift
+    - datalift-agent
+    - helm
+    kubeVersion: '>= 1.20.0-0'
+    maintainers:
+    - name: datalift
+      url: https://github.com/datalifthq
+    name: datalift-agent
+    sources:
+    - https://github.com/datalifthq/datalift-helm
+    type: application
+    urls:
+    - https://github.com/DataliftHQ/datalift-helm/releases/download/datalift-agent-0.1.1/datalift-agent-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2023-12-17T18:09:43.586389131Z"
@@ -22,4 +46,4 @@ entries:
     urls:
     - https://github.com/DataliftHQ/datalift-helm/releases/download/datalift-agent-0.1.0/datalift-agent-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-17T18:09:43.586400022Z"
+generated: "2023-12-17T19:05:22.912070056Z"
