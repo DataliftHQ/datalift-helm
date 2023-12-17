@@ -30,9 +30,6 @@ jobs:
       run: |
         git config user.name "$GITHUB_ACTOR"
         git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-    # - name: Fetch current Chart Index
-    #   run: |
-    #     git checkout origin/gh-pages index.yaml
     - name: Run chart-releaser
       uses: helm/chart-releaser-action@v1.6.0
       with:
@@ -48,9 +45,10 @@ jobs:
     - name: Push chart to GHCR
       run: |
         shopt -s nullglob
+        repo=$(echo "${{ github.repository }}" | awk '{print tolower($0)}')
         for pkg in .cr-release-packages/*.tgz; do
           if [ -z "${pkg:-}" ]; then
             break
           fi
-          helm push "${pkg}" oci://ghcr.io/${{ github.repository }}
+          helm push "${pkg}" oci://ghcr.io/"${repo}"
         done
