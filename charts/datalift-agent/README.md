@@ -1,6 +1,6 @@
-# Datalift Helm Chart
+# Datalift Agent Helm Chart
 
-This repository contains the official Datalift Helm chart for installing
+This repository contains the official Datalift Agent Helm chart for installing
 and configuring Datalift on Kubernetes.
 
 ## Prerequisites
