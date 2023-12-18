@@ -1,21 +1,11 @@
 # Security Policy
 
-## Supported Versions
+## Reporting a Vulnerability for Datalift Helm Charts
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+We have enabled the ability to privately report security issues through the  Security tab above.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+[Here are the details on how to file](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability#privately-reporting-a-security-vulnerability) on how to do that
 
-## Reporting a Vulnerability
+A repository owner/maintainer will respond as fast as possible to coordinate confirmation of issue and remediation.
 
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Thank you for helping to ensure this code stays secure.
