@@ -30,10 +30,17 @@ Before installing the chart, you must create two Kubernetes secrets:
 To use the charts, you must add the Datalift Helm Chart repository.
 
 ```shell
-$ helm repo add datalift https://charts.datalift.io
-"datalift" has been added to your repositories
+helm repo add datalift https://charts.datalift.io
+helm repo update
+helm install datalift-agent datalift/datalift-agent \
+    -set config.token='AGENT_TOKEN'
+```
 
-$ helm install datalift datalift/datalift-agent
+### Upgrade existing Helm Chart
+
+```
+helm repo update
+helm upgrade datalift-agent datalift/datalift-agent --reuse-values
 ```
 
 ## Values
