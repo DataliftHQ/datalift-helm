@@ -30,10 +30,17 @@ Before installing the chart, you must create two Kubernetes secrets:
 To use the charts, you must add the Datalift Helm Chart repository.
 
 ```shell
-$ helm repo add datalift https://charts.datalift.io
-"datalift" has been added to your repositories
+helm repo add datalift https://charts.datalift.io
+helm repo update
+helm install datalift-agent datalift/datalift-agent \
+    -set config.token='AGENT_TOKEN'
+```
 
-$ helm install datalift datalift/datalift-agent
+### Upgrade existing Helm Chart
+
+```
+helm repo update
+helm upgrade datalift-agent datalift/datalift-agent --reuse-values
 ```
 
 ## Values
@@ -43,22 +50,12 @@ $ helm install datalift datalift/datalift-agent
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
-| autoscaling.enabled | bool | `false` |  |
-| autoscaling.maxReplicas | int | `100` |  |
-| autoscaling.minReplicas | int | `1` |  |
-| autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
+| config | object | `{}` |  |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"nginx"` |  |
+| image.repository | string | `"datalifthq/datalift-agent"` |  |
 | image.tag | string | `""` |  |
 | imagePullSecrets | list | `[]` |  |
-| ingress.annotations | object | `{}` |  |
-| ingress.className | string | `""` |  |
-| ingress.enabled | bool | `false` |  |
-| ingress.hosts[0].host | string | `"chart-example.local"` |  |
-| ingress.hosts[0].paths[0].path | string | `"/"` |  |
-| ingress.hosts[0].paths[0].pathType | string | `"ImplementationSpecific"` |  |
-| ingress.tls | list | `[]` |  |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |

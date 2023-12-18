@@ -16,7 +16,7 @@ icon: https://raw.githubusercontent.com/datalifthq/datalift-helm/master/logo.png
 keywords:
 - datalift
 - datalift-agent
-- helm
+- idp
 sources:
 - https://github.com/datalifthq/datalift-helm
 maintainers:
