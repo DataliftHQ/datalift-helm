@@ -32,6 +32,7 @@ To use the charts, you must add the Datalift Helm Chart repository.
 ```shell
 $ helm repo add datalift https://charts.datalift.io
 "datalift" has been added to your repositories
+
 $ helm install datalift datalift/datalift-agent
 ```
 
